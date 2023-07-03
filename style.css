@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: white;
+    font-family: monospace, sans-serif;
+    /* background: linear-gradient(rgb(7, 7, 100), rgb(29, 5, 68), rgb(25, 3, 54), rgb(21, 2, 39),  black) */
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 30rem;
+    height: 30rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    box-shadow: -10px 10px 10px black;
+
+    border-radius: 15px;
+}
+
+.box {
+    width: 10rem;
+    height: 10rem;
+
+    box-shadow: -10px 10px 10px black;
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.2s;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    background: black;
+    z-index: 99;
+    border-radius: 25px;
+}
+
+.no-left {
+    border-left: 0;
+}
+
+.no-right {
+    border-right: 0;
+}
+
+.no-top {
+    border-top: 0;
+}
+
+.no-bottom {
+    border-bottom: 0;
+}
+
+.box1 {
+    border-top-left-radius: 15px;
+}
+
+.box3 {
+    border-top-right-radius: 15px;
+}
+
+.box7 {
+    border-bottom-left-radius: 15px;
+} 
+
+.box9 {
+    border-bottom-right-radius: 15px;
+}
+
+.circle {
+    background-color: rgb(10, 6, 228);
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+
+    box-shadow: -8px 8px 15px rgb(2, 2, 87);
+}
+
+.small-circle {
+    background-color: white;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+
+    box-shadow: 8px -6px 8px rgb(80, 86, 211);
+}
+
+.cross {
+    width: 6rem;
+    height: 6rem;
+    background-color: '';
+    position: relative;
+
+    transform: rotate(45deg);
+}
+
+.cross:before, .cross:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: red;
+
+   
+  }
+  
+  .cross:before {
+    left: 50%;
+    width: 30%;
+    margin-left: -15%;
+    height: 100%;
+    
+    box-shadow: -8px 8px 15px rgb(77, 1, 1);
+  }
+  
+  .cross:after {
+    top: 50%;
+    height: 30%;
+    margin-top: -15%;
+    width: 100%;
+
+    box-shadow: -8px 8px 15px rgb(95, 4, 4);
+  }
+
+
+button {
+    position: absolute;
+    top: 2rem;
+    width: 6rem;
+    height: 2rem;
+    background-color: white;
+
+    border: 0;
+    border-radius: 20px;
+
+    box-shadow: -8px 8px 8px grey;
+
+    transition: transform 0.25s;
+}
+
+button:hover {
+    transform: scale(1.5);
+    background-color: black;
+    color: white;
+}
