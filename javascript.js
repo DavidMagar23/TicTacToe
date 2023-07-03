@@ -1,11 +1,14 @@
 // Initialize variables and button
 const Boxes = document.querySelectorAll('.box');
+let clickSfx = document.querySelector('.clickSfx');
+let win = document.querySelector('.win')
 let turn = 2;
 let counter = 0;
 for (box of Boxes) {
     box.used = false;
 
-    box.addEventListener("click", (e) => {
+    box.addEventListener("click", boxEvent = (e) => {
+
         if (e.target.used === false){
             e.target.used = true;
 
@@ -18,7 +21,7 @@ for (box of Boxes) {
                 e.target.appendChild(circle);
                 circle.appendChild(smallCircle);
                 box.contain = 'circle';
-    
+                clickSfx.play();
                 turn++
             }
             else {
@@ -26,11 +29,12 @@ for (box of Boxes) {
                 cross.classList.add('cross');
                 e.target.appendChild(cross);
                 box.contain = 'cross'
+                clickSfx.play();
                 turn++;
             }
-    
-            
         }
+
+        checkWin();
     })
 }
 
@@ -39,6 +43,7 @@ for (box of Boxes) {
 let reset = document.querySelector('button');
 reset.addEventListener("click", (e) => {
     counter = 0;
+    turn = 2;
     for (box of Boxes) {
         box.innerText = '';
         box.used = false;
@@ -46,3 +51,5 @@ reset.addEventListener("click", (e) => {
     }
 })
 
+function checkWin () {
+}
