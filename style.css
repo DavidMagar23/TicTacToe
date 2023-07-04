@@ -2,18 +2,19 @@
     box-sizing: border-box;
 }
 
-body {
-    min-height: 100vh;
-    background: white;
-    font-family: monospace, Poppins , Helvetica;
-    /* // Dark mode // */
-    /* background: linear-gradient(rgb(7, 7, 100), rgb(29, 5, 68), rgb(25, 3, 54), rgb(21, 2, 39),  black) */
-}
-
 .center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+body {
+    min-height: 100vh;
+    background: white;
+    font-family: monospace, Poppins , Helvetica;
+    flex-direction: column;
+    /* // Dark mode // */
+    /* background: linear-gradient(rgb(7, 7, 100), rgb(29, 5, 68), rgb(25, 3, 54), rgb(21, 2, 39),  black) */
 }
 
 .container {
@@ -26,6 +27,8 @@ body {
     box-shadow: -10px 10px 10px black;
 
     border-radius: 15px;
+
+    margin: 2rem auto;
 }
 
 .box {
@@ -134,11 +137,13 @@ body {
 
 
 button {
-    position: absolute;
-    top: 2rem;
+    /* position: absolute;
+    top: 2rem; */
     width: 6rem;
     height: 2rem;
     background-color: white;
+
+    font-size: 1.3rem;
 
     border: 0;
     border-radius: 20px;
@@ -155,10 +160,11 @@ button:hover {
 }
 
 .gameText {
-    position: absolute;
-    bottom: 2rem;
+    /* position: absolute;
+    bottom: 2rem; */
     font-size: 2rem;
     letter-spacing: 0.25rem;
+    min-height: 2.5rem;
 }
 
 .player1 {
@@ -200,9 +206,74 @@ footer {
     position: fixed;
     bottom: 0;
     background-color: black;
-    padding: 0.2rem 0;
+    padding: 0.3rem 0;
     width: 100%;
     color: white;
     text-align: center;
 }
 
+
+@media only screen and (width < 361px) {
+    * {
+        font-size: 0.6rem;
+    }
+    
+    .container {
+        margin: 5rem auto;
+    }
+    
+}
+
+@media only screen and (width < 281px) {
+    * {
+        font-size: 0.5rem;
+    }
+
+    button {
+        font-size: 1.5rem;
+    }
+
+    .gameText {
+        min-height: 3.5rem;
+        font-size: 3rem;
+    }
+}
+
+
+@media only screen and (360px < width < 480px)  {
+    * {
+        font-size: 0.7rem;
+    }
+
+        
+    button {
+        font-size: 1.3rem;
+    }
+
+    .gameText {
+        min-height: 3.5rem;
+        font-size: 3rem;
+    }
+
+    .container {
+        margin: 5rem auto;
+    }
+}
+
+@media only screen and (540px < width < 821px) {
+    * {
+        font-size: 1.45rem;
+    }
+}
+
+@media only screen and (820px < width < 1024px) {
+    * {
+        font-size: 1.45rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (min-height: 599px) {
+    * {
+        font-size: 0.8rem;
+    }
+}
