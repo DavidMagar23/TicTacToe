@@ -5,7 +5,8 @@
 body {
     min-height: 100vh;
     background: white;
-    font-family: monospace, sans-serif;
+    font-family: monospace, Poppins , Helvetica;
+    /* // Dark mode // */
     /* background: linear-gradient(rgb(7, 7, 100), rgb(29, 5, 68), rgb(25, 3, 54), rgb(21, 2, 39),  black) */
 }
 
@@ -78,7 +79,7 @@ body {
 }
 
 .circle {
-    background-color: rgb(10, 6, 228);
+    background: rgb(10, 6, 228);
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
@@ -152,3 +153,56 @@ button:hover {
     background-color: black;
     color: white;
 }
+
+.gameText {
+    position: absolute;
+    bottom: 2rem;
+    font-size: 2rem;
+    letter-spacing: 0.25rem;
+}
+
+.player1 {
+    color: rgb(255, 255, 0);
+    text-shadow: -2px 2px 3px rgb(98, 116, 2);
+}
+
+.player2 {
+    color: green;
+    text-shadow: -2px 2px 3px rgb(179, 255, 0);
+}
+
+.yellow .circle {
+    background: rgb(238, 255, 0);
+    box-shadow: -8px 8px 15px rgb(159, 170, 5);
+}
+
+.yellow .small-circle {
+    box-shadow: 0 0 yellow;
+}
+
+.yellow .cross::before {
+    background: rgb(0, 190, 10);
+    box-shadow: -8px 8px 15px rgb(2, 87, 13);
+
+}
+
+.yellow .cross::after{
+    background: rgb(0, 190, 10);
+    box-shadow: -8px 8px 15px rgb(2, 87, 13);
+
+}
+
+.unclick {
+    pointer-events: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    padding: 0.2rem 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
